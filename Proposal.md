@@ -25,8 +25,10 @@
 
 ## Extra Task 2: Adding other OFF objects into the scene (5 points - 10 points)
 <p>Finding other off objects such as fire hydrant, a pole to support the dragon so that it's not floating in the middle of the scene. The points varies based on the below standards:</p>
-1. Whether the objects are created using other frameworks and libraries, or they are pre-made OFF resources found from open sources.
-2. The amount of objects in the scenes and they overlapping complexity of them. (Depth-of-field)
-3. The other effects applied to other objects, such as mirror reflections.
+<ol>
+  <li>Whether the objects are created using other frameworks and libraries, or they are pre-made OFF resources found from open sources.</li>
+  <li>The amount of objects in the scenes and they overlapping complexity of them. (Depth-of-field)</li>
+  <li>The other effects applied to other objects, such as mirror reflections.</li>
+</ol>
 <p>Base point for this task is to add at least 2 other off objects without much manipulations. Anything above 5 points will include at least one of the above complexity and will be specified depends on difficulties and complexities in practice. Every additional feature implemented will be clarified in the final report.</p>
 
