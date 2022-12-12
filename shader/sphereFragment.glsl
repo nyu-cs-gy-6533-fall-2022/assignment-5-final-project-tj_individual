@@ -55,6 +55,7 @@ vec3 getColor(vec3 light, vec3 camera, Sphere s, vec3 min_intersectPos, vec3 min
 		
 	}
 
+
 void main(){
     float x = float(texture(tex, (0+0.5)/4.0));
     float y = float(texture(tex, (1+0.5)/4.0));
