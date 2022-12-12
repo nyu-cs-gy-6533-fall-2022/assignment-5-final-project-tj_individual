@@ -65,6 +65,8 @@ CMAKE_BINARY_DIR = "/Users/tianjiaopei/Documents/0. 阶段专注/硕士学业/20
 # The main recursive "all" target.
 all: CMakeFiles/sphere.dir/all
 all: CMakeFiles/rabbit.dir/all
+all: CMakeFiles/rabbitAreaLight.dir/all
+all: CMakeFiles/rabbitIceEffect.dir/all
 all: glfw/all
 .PHONY : all
 
@@ -75,6 +77,8 @@ preinstall: glfw/preinstall
 # The main recursive "clean" target.
 clean: CMakeFiles/sphere.dir/clean
 clean: CMakeFiles/rabbit.dir/clean
+clean: CMakeFiles/rabbitAreaLight.dir/clean
+clean: CMakeFiles/rabbitIceEffect.dir/clean
 clean: glfw/clean
 .PHONY : clean
 
@@ -117,7 +121,7 @@ glfw/src/clean: glfw/src/CMakeFiles/update_mappings.dir/clean
 CMakeFiles/sphere.dir/all: glfw/src/CMakeFiles/glfw.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sphere.dir/build.make CMakeFiles/sphere.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sphere.dir/build.make CMakeFiles/sphere.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/tianjiaopei/Documents/0. 阶段专注/硕士学业/2022F/CS6533 CG/Assignment/Final Project/assignment-5-final-project-tj_individual/out/CMakeFiles" --progress-num=26,27,28 "Built target sphere"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/tianjiaopei/Documents/0. 阶段专注/硕士学业/2022F/CS6533 CG/Assignment/Final Project/assignment-5-final-project-tj_individual/out/CMakeFiles" --progress-num=32,33,34 "Built target sphere"
 .PHONY : CMakeFiles/sphere.dir/all
 
 # Build rule for subdir invocation for target.
@@ -161,6 +165,58 @@ rabbit: CMakeFiles/rabbit.dir/rule
 CMakeFiles/rabbit.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rabbit.dir/build.make CMakeFiles/rabbit.dir/clean
 .PHONY : CMakeFiles/rabbit.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/rabbitAreaLight.dir
+
+# All Build rule for target.
+CMakeFiles/rabbitAreaLight.dir/all: glfw/src/CMakeFiles/glfw.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rabbitAreaLight.dir/build.make CMakeFiles/rabbitAreaLight.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rabbitAreaLight.dir/build.make CMakeFiles/rabbitAreaLight.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/tianjiaopei/Documents/0. 阶段专注/硕士学业/2022F/CS6533 CG/Assignment/Final Project/assignment-5-final-project-tj_individual/out/CMakeFiles" --progress-num=26,27,28 "Built target rabbitAreaLight"
+.PHONY : CMakeFiles/rabbitAreaLight.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/rabbitAreaLight.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/tianjiaopei/Documents/0. 阶段专注/硕士学业/2022F/CS6533 CG/Assignment/Final Project/assignment-5-final-project-tj_individual/out/CMakeFiles" 25
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/rabbitAreaLight.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/tianjiaopei/Documents/0. 阶段专注/硕士学业/2022F/CS6533 CG/Assignment/Final Project/assignment-5-final-project-tj_individual/out/CMakeFiles" 0
+.PHONY : CMakeFiles/rabbitAreaLight.dir/rule
+
+# Convenience name for target.
+rabbitAreaLight: CMakeFiles/rabbitAreaLight.dir/rule
+.PHONY : rabbitAreaLight
+
+# clean rule for target.
+CMakeFiles/rabbitAreaLight.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rabbitAreaLight.dir/build.make CMakeFiles/rabbitAreaLight.dir/clean
+.PHONY : CMakeFiles/rabbitAreaLight.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/rabbitIceEffect.dir
+
+# All Build rule for target.
+CMakeFiles/rabbitIceEffect.dir/all: glfw/src/CMakeFiles/glfw.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rabbitIceEffect.dir/build.make CMakeFiles/rabbitIceEffect.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rabbitIceEffect.dir/build.make CMakeFiles/rabbitIceEffect.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/tianjiaopei/Documents/0. 阶段专注/硕士学业/2022F/CS6533 CG/Assignment/Final Project/assignment-5-final-project-tj_individual/out/CMakeFiles" --progress-num=29,30,31 "Built target rabbitIceEffect"
+.PHONY : CMakeFiles/rabbitIceEffect.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/rabbitIceEffect.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/tianjiaopei/Documents/0. 阶段专注/硕士学业/2022F/CS6533 CG/Assignment/Final Project/assignment-5-final-project-tj_individual/out/CMakeFiles" 25
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/rabbitIceEffect.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/tianjiaopei/Documents/0. 阶段专注/硕士学业/2022F/CS6533 CG/Assignment/Final Project/assignment-5-final-project-tj_individual/out/CMakeFiles" 0
+.PHONY : CMakeFiles/rabbitIceEffect.dir/rule
+
+# Convenience name for target.
+rabbitIceEffect: CMakeFiles/rabbitIceEffect.dir/rule
+.PHONY : rabbitIceEffect
+
+# clean rule for target.
+CMakeFiles/rabbitIceEffect.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rabbitIceEffect.dir/build.make CMakeFiles/rabbitIceEffect.dir/clean
+.PHONY : CMakeFiles/rabbitIceEffect.dir/clean
 
 #=============================================================================
 # Target rules for target glfw/CMakeFiles/uninstall.dir
@@ -221,7 +277,7 @@ glfw/src/CMakeFiles/glfw.dir/clean:
 glfw/src/CMakeFiles/update_mappings.dir/all:
 	$(MAKE) $(MAKESILENT) -f glfw/src/CMakeFiles/update_mappings.dir/build.make glfw/src/CMakeFiles/update_mappings.dir/depend
 	$(MAKE) $(MAKESILENT) -f glfw/src/CMakeFiles/update_mappings.dir/build.make glfw/src/CMakeFiles/update_mappings.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/tianjiaopei/Documents/0. 阶段专注/硕士学业/2022F/CS6533 CG/Assignment/Final Project/assignment-5-final-project-tj_individual/out/CMakeFiles" --progress-num=29 "Built target update_mappings"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/tianjiaopei/Documents/0. 阶段专注/硕士学业/2022F/CS6533 CG/Assignment/Final Project/assignment-5-final-project-tj_individual/out/CMakeFiles" --progress-num=35 "Built target update_mappings"
 .PHONY : glfw/src/CMakeFiles/update_mappings.dir/all
 
 # Build rule for subdir invocation for target.

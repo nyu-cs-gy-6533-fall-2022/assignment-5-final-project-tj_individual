@@ -207,8 +207,8 @@ vec3 getColor(vec3 lightArray[3], vec3 camera, Material mat, vec3 min_intersectP
 
             vec3 r = 2 * dot(min_normal, l) * min_normal - l; //reflection dir
             vec3 v = normalize(camera - min_intersectPos); //observe dir
-            vec3 spec = ks * pow(dot(r,v), mat.specularEx);      
-            spec_total = spec;  
+            vec3 spec = ks * pow(dot(r,v), mat.specularEx);  
+            spec_total = spec;      
         }
 
      	// part 3

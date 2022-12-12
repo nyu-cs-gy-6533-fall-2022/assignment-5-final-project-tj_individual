@@ -276,7 +276,7 @@ int main(void)
 
     Program quad_program;
     // load fragment shader file 
-    std::ifstream fragShaderFileFrame("../shader/rabbitFragment.glsl");
+    std::ifstream fragShaderFileFrame("../shader/rabbitFragmentAreaLight.glsl");
     std::stringstream fragCodeFrame;
     fragCodeFrame << fragShaderFileFrame.rdbuf();
     // load vertex shader file

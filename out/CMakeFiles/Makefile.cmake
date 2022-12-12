@@ -151,6 +151,8 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/sphere.dir/DependInfo.cmake"
   "CMakeFiles/rabbit.dir/DependInfo.cmake"
+  "CMakeFiles/rabbitAreaLight.dir/DependInfo.cmake"
+  "CMakeFiles/rabbitIceEffect.dir/DependInfo.cmake"
   "glfw/CMakeFiles/uninstall.dir/DependInfo.cmake"
   "glfw/src/CMakeFiles/glfw.dir/DependInfo.cmake"
   "glfw/src/CMakeFiles/update_mappings.dir/DependInfo.cmake"

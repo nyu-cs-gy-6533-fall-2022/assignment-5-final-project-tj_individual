@@ -70,3 +70,9 @@ target_link_libraries(sphere ${LIBRARIES} ${OPENGL_LIBRARIES})
 
 add_executable(rabbit ${CMAKE_CURRENT_SOURCE_DIR}/src/rabbit.cpp ${SOURCES} ${GLSL})
 target_link_libraries(rabbit ${LIBRARIES} ${OPENGL_LIBRARIES})
+
+add_executable(rabbitAreaLight ${CMAKE_CURRENT_SOURCE_DIR}/src/rabbitAreaLight.cpp ${SOURCES} ${GLSL})
+target_link_libraries(rabbitAreaLight ${LIBRARIES} ${OPENGL_LIBRARIES})
+
+add_executable(rabbitIceEffect ${CMAKE_CURRENT_SOURCE_DIR}/src/rabbitIceEffect.cpp ${SOURCES} ${GLSL})
+target_link_libraries(rabbitIceEffect ${LIBRARIES} ${OPENGL_LIBRARIES})

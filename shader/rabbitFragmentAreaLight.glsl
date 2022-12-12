@@ -1,5 +1,6 @@
 #version 150 core
 
+#define M_PI 3.1415926535897932384626433832795
 
 out vec4 outColor;
 
@@ -23,6 +24,10 @@ uniform vec3 planeNormal4;
 
 uniform vec3 planePoint5;
 uniform vec3 planeNormal5;
+
+float random (in vec2 st) {
+    return fract(sin(dot(st.xy, vec2(12.9898,78.233)))*43758.5453123);
+}
 
 struct Material{
     vec3 color;
@@ -185,6 +190,33 @@ bool pointInShadow(vec3 point, vec3 light){
     return false;
 }
 
+float softShadowRatio(vec3 pos, vec3 lightVec) {
+  float notInShadow = 0.0;
+  float softSampler = 10.0;
+  int N = int(sqrt(softSampler));
+  for (int i = 0; i < N; i++) {
+    for (int j = 0; j < N; j++) {
+      // (i, j) represents tile locations
+      // rand values are offsets in that grid, which has the range [0, 1/N]
+      float x = float(i) / float(N) + random(vec2(0.0, 1.0/float(N)));
+      float y = float(j) / float(N) + random(vec2(0.0, 1.0/float(N)));
+      // convert to sphere coordinates
+      float theta = 2.0 * M_PI * x;
+      float phi = acos(2.0 * y - 1.0);
+      float u = cos(phi);
+
+      // find (x, y, z) offset
+      vec3 sample = vec3(sqrt(1.0 - u*u)*cos(theta), sqrt(1.0 - u*u)*sin(theta), u);
+
+      // apply sample offset to lightVec, check whether if the point is in shadow given the new light vec
+
+      bool inShadow = pointInShadow(pos, lightVec + sample);
+      notInShadow += float(!inShadow);
+    }
+  }
+  return notInShadow/float(softSampler);
+
+}
 
 vec3 getColor(vec3 lightArray[3], vec3 camera, Material mat, vec3 min_intersectPos, vec3 min_normal){
         vec3 ambientColor = vec3(0);
@@ -194,12 +226,13 @@ vec3 getColor(vec3 lightArray[3], vec3 camera, Material mat, vec3 min_intersectP
         vec3 ks = vec3(1,1,1);
 
         for(int i=0; i<3; i++){
+            float softRatio = softShadowRatio(min_intersectPos, lightArray[i]);
             if (pointInShadow(min_intersectPos, lightArray[i]))
                 continue;
             //diffuse
             vec3 l = normalize(lightArray[i] - min_intersectPos); //light dir
             vec3 d = kd* mat.color * dot(min_normal, l);
-            d_total = d;
+            d_total += softRatio * d;
             //specular
             //if not facing towards the light, skip
             if(!mat.isSpecular || dot(min_normal, l) <0.1)
@@ -207,8 +240,8 @@ vec3 getColor(vec3 lightArray[3], vec3 camera, Material mat, vec3 min_intersectP
 
             vec3 r = 2 * dot(min_normal, l) * min_normal - l; //reflection dir
             vec3 v = normalize(camera - min_intersectPos); //observe dir
-            vec3 spec = ks * pow(dot(r,v), mat.specularEx);      
-            spec_total = spec;  
+            vec3 spec = ks * pow(dot(r,v), mat.specularEx);        
+            spec_total += softRatio * spec;
         }
 
      	// part 3
