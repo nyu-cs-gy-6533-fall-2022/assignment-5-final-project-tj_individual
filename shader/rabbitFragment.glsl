@@ -63,7 +63,7 @@ Triangle getTriangle(int i){
         v[2] = vec3(a1, a2, a3);
 
         
-        return Triangle( v, Material(vec3(1.0,0.5,0.0), true, 10.0));
+        return Triangle( v, Material(vec3(0.67,0.82,0.95), true, 10.0));
 }
 
 float PlaneIntersect(vec3 rayOrigin, vec3 rayDir, Plane plane, out vec3 intersectPos, out vec3 normal){
@@ -199,7 +199,7 @@ vec3 getColor(vec3 lightArray[3], vec3 camera, Material mat, vec3 min_intersectP
             //diffuse
             vec3 l = normalize(lightArray[i] - min_intersectPos); //light dir
             vec3 d = kd* mat.color * dot(min_normal, l);
-            d_total = d;
+            d_total += d;
             //specular
             //if not facing towards the light, skip
             if(!mat.isSpecular || dot(min_normal, l) <0.1)
@@ -208,7 +208,7 @@ vec3 getColor(vec3 lightArray[3], vec3 camera, Material mat, vec3 min_intersectP
             vec3 r = 2 * dot(min_normal, l) * min_normal - l; //reflection dir
             vec3 v = normalize(camera - min_intersectPos); //observe dir
             vec3 spec = ks * pow(dot(r,v), mat.specularEx);      
-            spec_total = spec;  
+            spec_total += spec;  
         }
 
      	// part 3

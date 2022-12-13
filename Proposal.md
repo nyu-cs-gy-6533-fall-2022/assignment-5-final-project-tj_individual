@@ -9,8 +9,8 @@
 ## Task 3: Incoporate phong shading, various light sources, and ray-plane intersections(3 points)
 <p>The third task of this project is to implement everything we have done in the past assignments into the scene, with extra light sources and real life scene. </p>
 
-## Task 4: Changing the material of the bunny to ice / glue (3 points)
-<p>The fifth task of this project is to change the material of the bunny to either an ice bunny or glue-like bunny through either changing the surface diffusion to random diffusion or adding a texture wrapping to it. </p>
+## Task 4: Changing the material of the bunny to ice / crystal (3 points)
+<p>The fifth task of this project is to change the material of the bunny to either an ice bunny or crystal bunny through adding refraction with proper index. </p>
 
 ## Task 5: Applying soft shadow and area light to the bunny (5 points) 
 <p>The sixth part of this project is to apply a soft shaow effect and area light effect to the bunny into the scene. </p>

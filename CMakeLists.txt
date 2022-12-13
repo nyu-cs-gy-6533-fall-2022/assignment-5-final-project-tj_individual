@@ -74,5 +74,5 @@ target_link_libraries(rabbit ${LIBRARIES} ${OPENGL_LIBRARIES})
 add_executable(rabbitAreaLight ${CMAKE_CURRENT_SOURCE_DIR}/src/rabbitAreaLight.cpp ${SOURCES} ${GLSL})
 target_link_libraries(rabbitAreaLight ${LIBRARIES} ${OPENGL_LIBRARIES})
 
-add_executable(rabbitIceEffect ${CMAKE_CURRENT_SOURCE_DIR}/src/rabbitIceEffect.cpp ${SOURCES} ${GLSL})
-target_link_libraries(rabbitIceEffect ${LIBRARIES} ${OPENGL_LIBRARIES})
+add_executable(rabbitCrystal ${CMAKE_CURRENT_SOURCE_DIR}/src/rabbitCrystal.cpp ${SOURCES} ${GLSL})
+target_link_libraries(rabbitCrystal ${LIBRARIES} ${OPENGL_LIBRARIES})

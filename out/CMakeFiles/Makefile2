@@ -66,7 +66,7 @@ CMAKE_BINARY_DIR = "/Users/tianjiaopei/Documents/0. 阶段专注/硕士学业/20
 all: CMakeFiles/sphere.dir/all
 all: CMakeFiles/rabbit.dir/all
 all: CMakeFiles/rabbitAreaLight.dir/all
-all: CMakeFiles/rabbitIceEffect.dir/all
+all: CMakeFiles/rabbitCrystal.dir/all
 all: glfw/all
 .PHONY : all
 
@@ -78,7 +78,7 @@ preinstall: glfw/preinstall
 clean: CMakeFiles/sphere.dir/clean
 clean: CMakeFiles/rabbit.dir/clean
 clean: CMakeFiles/rabbitAreaLight.dir/clean
-clean: CMakeFiles/rabbitIceEffect.dir/clean
+clean: CMakeFiles/rabbitCrystal.dir/clean
 clean: glfw/clean
 .PHONY : clean
 
@@ -193,30 +193,30 @@ CMakeFiles/rabbitAreaLight.dir/clean:
 .PHONY : CMakeFiles/rabbitAreaLight.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/rabbitIceEffect.dir
+# Target rules for target CMakeFiles/rabbitCrystal.dir
 
 # All Build rule for target.
-CMakeFiles/rabbitIceEffect.dir/all: glfw/src/CMakeFiles/glfw.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rabbitIceEffect.dir/build.make CMakeFiles/rabbitIceEffect.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rabbitIceEffect.dir/build.make CMakeFiles/rabbitIceEffect.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/tianjiaopei/Documents/0. 阶段专注/硕士学业/2022F/CS6533 CG/Assignment/Final Project/assignment-5-final-project-tj_individual/out/CMakeFiles" --progress-num=29,30,31 "Built target rabbitIceEffect"
-.PHONY : CMakeFiles/rabbitIceEffect.dir/all
+CMakeFiles/rabbitCrystal.dir/all: glfw/src/CMakeFiles/glfw.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rabbitCrystal.dir/build.make CMakeFiles/rabbitCrystal.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rabbitCrystal.dir/build.make CMakeFiles/rabbitCrystal.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/tianjiaopei/Documents/0. 阶段专注/硕士学业/2022F/CS6533 CG/Assignment/Final Project/assignment-5-final-project-tj_individual/out/CMakeFiles" --progress-num=29,30,31 "Built target rabbitCrystal"
+.PHONY : CMakeFiles/rabbitCrystal.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/rabbitIceEffect.dir/rule: cmake_check_build_system
+CMakeFiles/rabbitCrystal.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/tianjiaopei/Documents/0. 阶段专注/硕士学业/2022F/CS6533 CG/Assignment/Final Project/assignment-5-final-project-tj_individual/out/CMakeFiles" 25
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/rabbitIceEffect.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/rabbitCrystal.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/tianjiaopei/Documents/0. 阶段专注/硕士学业/2022F/CS6533 CG/Assignment/Final Project/assignment-5-final-project-tj_individual/out/CMakeFiles" 0
-.PHONY : CMakeFiles/rabbitIceEffect.dir/rule
+.PHONY : CMakeFiles/rabbitCrystal.dir/rule
 
 # Convenience name for target.
-rabbitIceEffect: CMakeFiles/rabbitIceEffect.dir/rule
-.PHONY : rabbitIceEffect
+rabbitCrystal: CMakeFiles/rabbitCrystal.dir/rule
+.PHONY : rabbitCrystal
 
 # clean rule for target.
-CMakeFiles/rabbitIceEffect.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rabbitIceEffect.dir/build.make CMakeFiles/rabbitIceEffect.dir/clean
-.PHONY : CMakeFiles/rabbitIceEffect.dir/clean
+CMakeFiles/rabbitCrystal.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rabbitCrystal.dir/build.make CMakeFiles/rabbitCrystal.dir/clean
+.PHONY : CMakeFiles/rabbitCrystal.dir/clean
 
 #=============================================================================
 # Target rules for target glfw/CMakeFiles/uninstall.dir

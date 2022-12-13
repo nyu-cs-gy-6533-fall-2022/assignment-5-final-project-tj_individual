@@ -201,17 +201,17 @@ rabbitAreaLight/fast:
 .PHONY : rabbitAreaLight/fast
 
 #=============================================================================
-# Target rules for targets named rabbitIceEffect
+# Target rules for targets named rabbitCrystal
 
 # Build rule for target.
-rabbitIceEffect: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 rabbitIceEffect
-.PHONY : rabbitIceEffect
+rabbitCrystal: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 rabbitCrystal
+.PHONY : rabbitCrystal
 
 # fast build rule for target.
-rabbitIceEffect/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rabbitIceEffect.dir/build.make CMakeFiles/rabbitIceEffect.dir/build
-.PHONY : rabbitIceEffect/fast
+rabbitCrystal/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rabbitCrystal.dir/build.make CMakeFiles/rabbitCrystal.dir/build
+.PHONY : rabbitCrystal/fast
 
 #=============================================================================
 # Target rules for targets named uninstall
@@ -260,7 +260,7 @@ src/Helpers.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sphere.dir/build.make CMakeFiles/sphere.dir/src/Helpers.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rabbit.dir/build.make CMakeFiles/rabbit.dir/src/Helpers.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rabbitAreaLight.dir/build.make CMakeFiles/rabbitAreaLight.dir/src/Helpers.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rabbitIceEffect.dir/build.make CMakeFiles/rabbitIceEffect.dir/src/Helpers.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rabbitCrystal.dir/build.make CMakeFiles/rabbitCrystal.dir/src/Helpers.cpp.o
 .PHONY : src/Helpers.cpp.o
 
 src/Helpers.i: src/Helpers.cpp.i
@@ -271,7 +271,7 @@ src/Helpers.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sphere.dir/build.make CMakeFiles/sphere.dir/src/Helpers.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rabbit.dir/build.make CMakeFiles/rabbit.dir/src/Helpers.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rabbitAreaLight.dir/build.make CMakeFiles/rabbitAreaLight.dir/src/Helpers.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rabbitIceEffect.dir/build.make CMakeFiles/rabbitIceEffect.dir/src/Helpers.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rabbitCrystal.dir/build.make CMakeFiles/rabbitCrystal.dir/src/Helpers.cpp.i
 .PHONY : src/Helpers.cpp.i
 
 src/Helpers.s: src/Helpers.cpp.s
@@ -282,7 +282,7 @@ src/Helpers.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sphere.dir/build.make CMakeFiles/sphere.dir/src/Helpers.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rabbit.dir/build.make CMakeFiles/rabbit.dir/src/Helpers.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rabbitAreaLight.dir/build.make CMakeFiles/rabbitAreaLight.dir/src/Helpers.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rabbitIceEffect.dir/build.make CMakeFiles/rabbitIceEffect.dir/src/Helpers.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rabbitCrystal.dir/build.make CMakeFiles/rabbitCrystal.dir/src/Helpers.cpp.s
 .PHONY : src/Helpers.cpp.s
 
 src/rabbit.o: src/rabbit.cpp.o
@@ -333,29 +333,29 @@ src/rabbitAreaLight.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rabbitAreaLight.dir/build.make CMakeFiles/rabbitAreaLight.dir/src/rabbitAreaLight.cpp.s
 .PHONY : src/rabbitAreaLight.cpp.s
 
-src/rabbitIceEffect.o: src/rabbitIceEffect.cpp.o
-.PHONY : src/rabbitIceEffect.o
+src/rabbitCrystal.o: src/rabbitCrystal.cpp.o
+.PHONY : src/rabbitCrystal.o
 
 # target to build an object file
-src/rabbitIceEffect.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rabbitIceEffect.dir/build.make CMakeFiles/rabbitIceEffect.dir/src/rabbitIceEffect.cpp.o
-.PHONY : src/rabbitIceEffect.cpp.o
+src/rabbitCrystal.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rabbitCrystal.dir/build.make CMakeFiles/rabbitCrystal.dir/src/rabbitCrystal.cpp.o
+.PHONY : src/rabbitCrystal.cpp.o
 
-src/rabbitIceEffect.i: src/rabbitIceEffect.cpp.i
-.PHONY : src/rabbitIceEffect.i
+src/rabbitCrystal.i: src/rabbitCrystal.cpp.i
+.PHONY : src/rabbitCrystal.i
 
 # target to preprocess a source file
-src/rabbitIceEffect.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rabbitIceEffect.dir/build.make CMakeFiles/rabbitIceEffect.dir/src/rabbitIceEffect.cpp.i
-.PHONY : src/rabbitIceEffect.cpp.i
+src/rabbitCrystal.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rabbitCrystal.dir/build.make CMakeFiles/rabbitCrystal.dir/src/rabbitCrystal.cpp.i
+.PHONY : src/rabbitCrystal.cpp.i
 
-src/rabbitIceEffect.s: src/rabbitIceEffect.cpp.s
-.PHONY : src/rabbitIceEffect.s
+src/rabbitCrystal.s: src/rabbitCrystal.cpp.s
+.PHONY : src/rabbitCrystal.s
 
 # target to generate assembly for a file
-src/rabbitIceEffect.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rabbitIceEffect.dir/build.make CMakeFiles/rabbitIceEffect.dir/src/rabbitIceEffect.cpp.s
-.PHONY : src/rabbitIceEffect.cpp.s
+src/rabbitCrystal.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rabbitCrystal.dir/build.make CMakeFiles/rabbitCrystal.dir/src/rabbitCrystal.cpp.s
+.PHONY : src/rabbitCrystal.cpp.s
 
 src/sphere.o: src/sphere.cpp.o
 .PHONY : src/sphere.o
@@ -398,7 +398,7 @@ help:
 	@echo "... glfw"
 	@echo "... rabbit"
 	@echo "... rabbitAreaLight"
-	@echo "... rabbitIceEffect"
+	@echo "... rabbitCrystal"
 	@echo "... sphere"
 	@echo "... src/Helpers.o"
 	@echo "... src/Helpers.i"
@@ -409,9 +409,9 @@ help:
 	@echo "... src/rabbitAreaLight.o"
 	@echo "... src/rabbitAreaLight.i"
 	@echo "... src/rabbitAreaLight.s"
-	@echo "... src/rabbitIceEffect.o"
-	@echo "... src/rabbitIceEffect.i"
-	@echo "... src/rabbitIceEffect.s"
+	@echo "... src/rabbitCrystal.o"
+	@echo "... src/rabbitCrystal.i"
+	@echo "... src/rabbitCrystal.s"
 	@echo "... src/sphere.o"
 	@echo "... src/sphere.i"
 	@echo "... src/sphere.s"
