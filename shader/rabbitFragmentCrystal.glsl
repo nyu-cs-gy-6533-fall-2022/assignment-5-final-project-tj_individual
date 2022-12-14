@@ -106,8 +106,8 @@ float TriangleIntersect(vec3 rayOrigin, vec3 rayDir, Triangle tri, out vec3 inte
         if(ln == 0) 
             return -1.0;
         float t = dot((tri.V[0] - rayOrigin), n) / ln;
-
-        if(t < 0.01)
+        // distance between two triangles
+        if(t < 0.03)
             return -1.0;
 
         vec3 p = rayOrigin + rd * t;
