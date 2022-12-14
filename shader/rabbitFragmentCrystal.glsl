@@ -1,9 +1,10 @@
+
 #version 150 core
 
 #define M_PI 3.1415926535897932384626433832795
 #define ICE_REFRACT_RATIO 1.31
-#define SOFTSAMPLER 9
-#define REFLECT_DEPTH 12
+#define SOFTSAMPLER 15
+#define REFLECT_DEPTH 15
 out vec4 outColor;
 
 uniform sampler1D tex;
@@ -106,7 +107,7 @@ float TriangleIntersect(vec3 rayOrigin, vec3 rayDir, Triangle tri, out vec3 inte
             return -1.0;
         float t = dot((tri.V[0] - rayOrigin), n) / ln;
 
-        if(t < 0)
+        if(t < 0.01)
             return -1.0;
 
         vec3 p = rayOrigin + rd * t;
@@ -221,7 +222,7 @@ float softShadowRatio(vec3 pos, vec3 lightVec) {
 
       // apply sample offset to lightVec, check whether if the point is in shadow given the new light vec
 
-      bool inShadow = pointInShadow(pos+ sample*0.08 , lightVec+sample*0.2 );
+      bool inShadow = pointInShadow(pos+ sample*0.08 , lightVec+sample*0.3 );
       notInShadow += float(!inShadow);
     }
   }
@@ -231,15 +232,24 @@ float softShadowRatio(vec3 pos, vec3 lightVec) {
 
 
 vec3 getReflect(vec3 rayOrigin, vec3 intersectPos, vec3 intersectNormal, bool isInsideObj){
+
     vec3 rayDir = normalize(intersectPos - rayOrigin);
     float eta = (isInsideObj) ? (1.0 / ICE_REFRACT_RATIO) : ICE_REFRACT_RATIO;
     float cos_theta_i = dot(rayDir, intersectNormal)/(length(rayDir) * length(intersectNormal));
     float theta_i = acos(cos_theta_i);
   
+
+
     // reflect
     if ((eta * sin(theta_i)) > 1.0) 
         return normalize(reflect(rayDir, intersectNormal));
-    return rayDir;
+
+
+       float theta_r = asin(eta * sin(theta_i));
+    vec3 T = eta * rayDir - (eta * cos_theta_i + cos(theta_r)) * intersectNormal;
+
+  return normalize(T);
+    //return rayDir;
 }
 
 
@@ -251,9 +261,10 @@ vec3 getColor( vec3 camera, Material mat, vec3 min_intersectPos, vec3 min_normal
         vec3 ks = vec3(1,1,1);
 
         for(int i=0; i<3; i++){
+            
+
             float softRatio = softShadowRatio(min_intersectPos, light[i]);
-            if (!noShadow && pointInShadow(min_intersectPos, light[i]))
-                continue;
+          
             //diffuse
             vec3 l = normalize(light[i] - min_intersectPos); //light dir
             vec3 d = kd* mat.color * dot(min_normal, l);
@@ -332,13 +343,13 @@ void main(){
     for(int i=hits-1; i>0; i--){
         
         vec3 reflectColor = getColor(intersectPosHistory[i-1], matHistory[i], intersectPosHistory[i], intersectNormalHistory[i], true);
-        //reflectColor = reflectColor / length(reflectColor) * length(matHistory[i-1].color);
-        matHistory[i-1].color = 0.25 * matHistory[i-1].color + 2 * reflectColor;
+        reflectColor = reflectColor / length(reflectColor) * length(matHistory[i-1].color) * 0.9;
+        matHistory[i-1].color = 0.2 * matHistory[i-1].color + 0.8 * reflectColor;
     }
     vec3 result1 =  getColor(camera, matHistory[0], intersectPosHistory[0], intersectNormalHistory[0], false);
-    vec3 result2 = hits>10 ? vec3(0.0): matHistory[hits-1].color;
+    vec3 result2 =  hits > int(REFLECT_DEPTH/5*4) ? vec3(0.0) :matHistory[hits-1].color * pow(0.9, hits);
 
-    if(length(result1) < 0.001)
+    if(length(result1) < 0.01)
         outColor = vec4(result2, 1.0);
     else
         outColor = vec4(result1, 1.0);

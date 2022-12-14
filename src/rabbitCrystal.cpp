@@ -309,7 +309,7 @@ int main(void)
 	glBindTexture(GL_TEXTURE_2D, renderedTexture);
 
 	// Give an empty image to OpenGL ( the last "0" means "empty" )
-	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, 400, 300, 0, GL_RGB, GL_UNSIGNED_BYTE, 0);
+	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, 480, 360, 0, GL_RGB, GL_UNSIGNED_BYTE, 0);
 	// Poor filtering
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST); 
@@ -344,7 +344,7 @@ int main(void)
     {  
         if (!stopRender){
             glBindFramebuffer(GL_DRAW_FRAMEBUFFER, FramebufferName);
-            glViewport(0, 0, 200, 150);
+            glViewport(0, 0, 240, 180);
 
             VAO.bind();
             quad_program.bind();

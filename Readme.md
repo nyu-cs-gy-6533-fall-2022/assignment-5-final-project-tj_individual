@@ -21,3 +21,4 @@
 <p> Adding reflection with refraction index of 1.35 and a max hit of 12 to simulate a crystal made rabbit. The resolution has to be further decreased to 200 * 150 due to the hardware limitations. High resolution with larger hit depth is run on an advanced PC and the result is also presented. </p>
 
 ![Alt text](./result/part4.png)
+![Alt text](./result/part4HD.png)
